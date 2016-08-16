@@ -77,14 +77,27 @@ Sample rails app built using Chargebee rails subscriptions gem (https://rubygems
   
 # Running the app
 
-  ```zsh
+ * **Using other payment gateways -** 
+ 
+ You could configure Stripe/Braintree Payment Gateways with chargebee and their api_keys with the application to checkout new subscriptions with Stripe/Braintree Payment Gateway.
+
+ In the application provide the values for specific configuration in *.env* file
   
-  $ rails s
-  
-  ```
+ ```env
+ BRAINTREE_MERCHANT_ID='merchant-id'
+ 
+ BRAINTREE_PUB_KEY='braintree-public-key'
+ 
+ BRAINTREE_PRV_KEY='braintree-private-key'
+ 
+ STRIPE_PUBLISHABLE_KEY='stripe-publishable-key'
+ ```
 
-  * **Using other payment gateways -** 
-    
-    You could configure Stripe/Braintree Payment Gateways with chargebee and their api_keys with the application to checkout new subscriptions with Stripe/Braintree Payment Gateway.
-
-
+ * **Start the server**
+ 
+ ```zsh
+ 
+ $ rails s
+ 
+ ```
+ 
